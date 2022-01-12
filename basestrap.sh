@@ -15,7 +15,6 @@ echo "=] 3. HYBRID [Direkomendasikan Untuk Media External/Beta test]"
 echo "======================================================="
 read -p ">> Pilih Jenis Boot (1/2/3) : " boot
 read -p "->] Input Nama Komputer Arch Linux (Contoh : pc atau acer) = " hstname
-read -p "->] Input Username = " hstname
 read -p "->] Input Jumlah ZRAM (Contoh 8192) terhitung satuan Mega Byte = " zramd
 
 echo ""
@@ -28,6 +27,5 @@ clear
 echo "zramd=$zramd" >> arrtx/install.conf
 echo "boot=$boot" >> arrtx/install.conf
 echo "drive=$drive" >> arrtx/install.conf
-echo "usrname=$usrname" >> arrtx/install.conf
 cp -rf arrtx /mnt
 artix-chroot /mnt

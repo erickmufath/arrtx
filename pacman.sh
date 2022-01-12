@@ -8,32 +8,32 @@ passwd ${usrname}
 echo "--------------------------------------------------------"
 echo "           Setup Bahasa, lokal, Hostname & Hosts        "
 echo "--------------------------------------------------------"
-sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /mnt/etc/locale.gen
+sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
-ln -sf /usr/share/zoneinfo/Asia/Jakarta /mnt/etc/localtime
-echo "LANG=en_US.UTF-8" >> /mnt/etc/locale.conf
+ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
 # Set hostname & hosts
-echo ${hstname} >> /mnt/etc/hostname
-echo "127.0.0.1	localhost" >> /mnt/etc/hosts
-echo "::1	localhost" >> /mnt/etc/hosts
-echo "127.0.1.1	${hstname}.localdomain	${hstname}" >> /mnt/etc/hosts
+echo ${hstname} >> /etc/hostname
+echo "127.0.0.1	localhost" >> /etc/hosts
+echo "::1	localhost" >> /etc/hosts
+echo "127.0.1.1	${hstname}.localdomain	${hstname}" >> /etc/hosts
 pacman -Sy sed --noconfirm
 
 # Add sudo no password rights
-sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /mnt/etc/sudoers
+sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 
 # Add sudo rights
-sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /mnt/etc/sudoers
+sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 #Add parallel downloading
-sed -i 's/^#Para/Para/' /mnt/etc/pacman.conf
+sed -i 's/^#Para/Para/' /etc/pacman.conf
 
 #Enable multilib
-sed -i "/\[lib32\]/,/Include/"'s/^#//' /mnt/etc/pacman.conf
-sed -i "/\[lib32-gremlins\]/,/Include/"'s/^#//' /mnt/etc/pacman.conf
+sed -i "/\[lib32\]/,/Include/"'s/^#//' /etc/pacman.conf
+sed -i "/\[lib32-gremlins\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Syyu
-cp -rf arrtx /mnt/home/${usrname}/
+cp -rf arrtx /home/${usrname}/
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy xorg pacman -Sy grub os-prober efibootmgr linux-headers ttf-carlito ttf-dejavu flatpak intel-ucode unzip ark gtk3 gtk4 sdl2 xfce4-terminal thunar mpv elisa awesome-terminal-fonts ttf-bitstream-vera ttf-carlito ttf-croscore ttf-fira-code ttf-fira-mono ttf-fira-sans ttf-font-awesome ttf-inconsolata ttf-liberation ttf-nerd-fonts-symbols ttf-opensans breeze materia-kde kdenlive audacity system-config-printer packagekit-qt5 wget git libnewt libfdk-aac celt lame libmad opus libvorbis opencore-amr speex flac wavpack faac faad2 jasper aom schroedinger libdv x265 x264 libmpeg2 xvidcore libtheora libvpx gstreamer gst-libav sddm sddm-runit rxvt-unicode lxappearance rofi openbox brightnessctl volumeicon ntfsprogs dosfstools dos2unix e2fsprogs xfsprogs ntfs-3g network-manager-applet bluez bluez-runit nano cups cups-runit xdg-utils xdg-user-dirs git artix-archlinux-support archlinux-keyring artix-keyring pacman --noconfirm --needed
 echo "#" >> /etc/pacman.conf
 echo "[extra]" >> /etc/pacman.conf

@@ -55,6 +55,12 @@ cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
 mkdir ~/.config/openbox
 cp ~/arrtx/rc.xml ~/.config/openbox
 cp ~/arrtx/autostart ~/.config/openbox
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+yay -Syyu
+yay -Sy --noconfirm --needed - < arrtx/aur.txt
 read -p "->] Install Lutris For Gaming (y/n) : " gam
 case $gam in
 y|Y|yes|Yes|YES)

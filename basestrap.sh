@@ -1,10 +1,17 @@
-pacman -Sy sed --noconfirm --needed
+pacman -Sy sed artix-archlinux-support pacman --noconfirm --needed
 #Add parallel downloading
 sed -i 's/^#Para/Para/' /etc/pacman.conf
 #sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
 #Enable multilib
 sed -i "/\[lib32\]/,/Include/"'s/^#//' /etc/pacman.conf
 sed -i "/\[lib32-gremlins\]/,/Include/"'s/^#//' /etc/pacman.conf
+echo "[extra]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+echo "[community]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+rm -r /etc/pacman.d/gnupg
+pacman-key --init
+pacman-key --populate archlinux artix
 #basestrap
 basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
 basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt

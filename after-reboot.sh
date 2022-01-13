@@ -1,7 +1,7 @@
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 nmtui
 source arrtx/install.conf
-/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy artix-archlinux-support --noconfirm --needed
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy artix-archlinux-support pacman --noconfirm --needed
 pacman-key --init
 pacman-key --import archlinux artix
 pacman-key --populate archlinux artix

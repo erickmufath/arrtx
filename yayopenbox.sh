@@ -17,3 +17,10 @@ sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo ln -s /etc/runit/sv/cupsd /run/runit/service
 sudo ln -s /etc/runit/sv/ntpd /run/runit/service
 sudo ln -s /etc/runit/sv/sddm /run/runit/service
+sudo sed -i 's/^# MAX_SIZE/MAX_SIZE/' /etc/default/zramd
+sudo sed -i 's/^8192/${zramd}/' /etc/default/zramd
+echo -e "\nSetup SDDM Theme"
+sudo cat <<EOF > /mnt/etc/sddm.conf
+[Theme]
+Current=Nordic
+EOF

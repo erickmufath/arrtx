@@ -1,4 +1,6 @@
 sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
+nmtui
+sleep 5
 source arrtx/install.conf
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2

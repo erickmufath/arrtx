@@ -16,7 +16,6 @@ echo "[community]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 rm -r /etc/pacman.d/gnupg
 pacman-key --init
-pacman-key --import archlinux artix
 pacman-key --populate archlinux artix
 pacman -Syyu
 sudo cp -rf arrtx/xorg.conf /etc/X11/

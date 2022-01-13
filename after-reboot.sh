@@ -6,7 +6,7 @@ pacman-key --init
 pacman-key --import archlinux artix
 pacman-key --populate archlinux artix
 pacman -Syyu
-sed -i 's/^Server/#Server/' /etc/pacman.conf
+#sed -i 's/^Server/#Server/' /etc/pacman.conf
 echo "Server = https://artix.wheaton.edu/repos/$repo/os/$arch" >> /etc/pacman.d/mirrorlist
 echo "Server = https://mirror.clarkson.edu/artix-linux/repos/$repo/os/$arch" >> /etc/pacman.d/mirrorlist
 echo "Server = https://us-mirror.artixlinux.org/$repo/os/$arch" >> /etc/pacman.d/mirrorlist

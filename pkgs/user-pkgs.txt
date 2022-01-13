@@ -39,7 +39,8 @@ git
 libnewt
 libfdk-aac
 celt
-lame libmad
+lame
+libmad
 opus
 libvorbis
 opencore-amr
@@ -61,7 +62,8 @@ libvpx
 gstreamer
 gst-libav
 sddm
-sddm-runit rxvt-unicode
+sddm-runit
+rxvt-unicode
 lxappearance
 rofi
 openbox

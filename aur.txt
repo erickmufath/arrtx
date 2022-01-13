@@ -7,9 +7,9 @@ aic94xx-firmware
 wd719x-firmware
 upd72020x-fw
 nerd-fonts-source-code-pro
-obs-studio-tytan652
 sddm-nordic-theme-git
 ttf-droid
 ttf-hack
 ttf-meslo
 ttf-roboto
+obs-studio-tytan652

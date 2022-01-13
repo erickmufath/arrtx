@@ -49,20 +49,7 @@ sudo cp -rf arrtx/xorg.conf /etc/X11/
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy reflector rsync ntp git networkmanager networkmanager-runit ttf-caladea nomacs scrcpy ttf-anonymous-pro ttf-cascadia-code ttf-cormorant ttf-eurof ttf-ibm-plex ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine ttf-linux-libertine-g ttf-monofur ttf-proggy-clean firefox adapta-gtk-theme materia-gtk-theme tint2 nitrogen obconf --noconfirm --needed
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf lsp-plugins pulsemixer --noconfirm --needed
-# openbox configuration
-git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
-rm -rf ~/.config/tint2
-git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
-cp ~/.config/tint2/minima/minima.tint2rc ~/.config/tint2/tint2rc
-mkdir ~/.config/openbox
-cp ~/arrtx/rc.xml ~/.config/openbox
-cp ~/arrtx/autostart ~/.config/openbox
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
-yay -Syyu
-yay -Sy --noconfirm --needed - < arrtx/aur.txt
+sh arrtx/yayopenbox.sh
 read -p "->] Install Lutris For Gaming (y/n) : " gam
 case $gam in
 y|Y|yes|Yes|YES)

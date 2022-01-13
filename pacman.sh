@@ -1,7 +1,11 @@
 source arrtx/install.conf
-echo "Setting Root Password"
+echo "--------------------------------------------------------"
+echo "           Setting Root Password        "
+echo "--------------------------------------------------------"
 passwd
-echo "Setting User"
+echo "--------------------------------------------------------"
+echo "           Setting User        "
+echo "--------------------------------------------------------"
 read -p "--> Input Username : " usrname
 useradd -mG wheel ${usrname}
 passwd ${usrname}

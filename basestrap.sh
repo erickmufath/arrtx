@@ -30,5 +30,6 @@ read -p "->] Input Drive untuk install Bootloader (Contoh : sda, sdb, atau nvmen
 clear
 echo "zramd=$zramd" >> arrtx/install.conf
 echo "boot=$boot" >> arrtx/install.conf
+echo "hstname=$hstname" >> arrtx/install.conf
 echo "drive=$drive" >> arrtx/install.conf
 cp -rf arrtx /mnt

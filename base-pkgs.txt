@@ -1,0 +1,7 @@
+base
+base-devel
+linux
+linux-firmware
+runit
+elogind-runit
+nano

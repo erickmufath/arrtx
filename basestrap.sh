@@ -6,11 +6,11 @@ sed -i 's/^#Para/Para/' /etc/pacman.conf
 sed -i "/\[lib32\]/,/Include/"'s/^#//' /etc/pacman.conf
 sed -i "/\[lib32-gremlins\]/,/Include/"'s/^#//' /etc/pacman.conf
 #basestrap
-basestrap /mnt base base-devel linux linux-firmware runit elogind-runit nano --needed
-basestrap /mnt base base-devel linux linux-firmware runit elogind-runit nano --needed
-basestrap /mnt base base-devel linux linux-firmware runit elogind-runit nano --needed
-basestrap /mnt base base-devel linux linux-firmware runit elogind-runit nano --needed
-basestrap /mnt base base-devel linux linux-firmware runit elogind-runit nano --needed
+basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
+basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
+basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
+basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
+basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
 fstabgen -U /mnt >> /mnt/etc/fstab
 echo "======================================================"
 echo "=] 1. BIOS/Legacy"

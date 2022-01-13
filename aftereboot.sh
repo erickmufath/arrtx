@@ -1,3 +1,5 @@
+source arrtx/install.conf
+cd /home/${usrname}/
 sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
 nmtui
 sleep 5

@@ -1,14 +1,19 @@
+sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
 source arrtx/install.conf
-git clone https://github.com/addy-dclxvi/openbox-theme-collections /home/${usrname}/.themes
-rm -rf /home/${usrname}/.config/tint2
-git clone https://github.com/addy-dclxvi/tint2-theme-collections /home/${usrname}/.config/tint2 --depth 1
-cp ~/.config/tint2/minima/minima.tint2rc /home/${usrname}/.config/tint2/tint2rc
-mkdir /home/${usrname}/.config/openbox
-cp ~/arrtx/rc.xml /home/${usrname}/.config/openbox
-cp ~/arrtx/autostart /home/${usrname}/.config/openbox
-git clone https://aur.archlinux.org/yay.git /home/${usrname}
-cd /home/${usrname}/yay
+git clone https://github.com/addy-dclxvi/openbox-theme-collections /.themes
+rm -rf /.config/tint2
+git clone https://github.com/addy-dclxvi/tint2-theme-collections /.config/tint2 --depth 1
+cp ~/.config/tint2/minima/minima.tint2rc /.config/tint2/tint2rc
+mkdir /.config/openbox
+cp ~/arrtx/rc.xml /.config/openbox
+cp ~/arrtx/autostart /.config/openbox
+git clone https://aur.archlinux.org/yay.git 
+cd yay
 makepkg -si --noconfirm
-cd /home/${usrname}
+cd 
 yay -Syyu
-yay -Sy --noconfirm --needed - < arrtx/aur.txt
+yay -Syu --needed - < arrtx/aur.txt
+sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+sudo ln -s /etc/runit/sv/cupsd /run/runit/service
+sudo ln -s /etc/runit/sv/ntpd /run/runit/service
+sudo ln -s /etc/runit/sv/sddm /run/runit/service

@@ -9,6 +9,7 @@ echo "--------------------------------------------------------"
 read -p "--> Input Username : " usrname
 useradd -mG wheel ${usrname}
 passwd ${usrname}
+echo "usrname=$usrname" >> /arrtx/install.conf
 echo "--------------------------------------------------------"
 echo "           Setup Bahasa, lokal, Hostname & Hosts        "
 echo "--------------------------------------------------------"

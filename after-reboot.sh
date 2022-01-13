@@ -1,6 +1,7 @@
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 nmtui
 source arrtx/install.conf
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy artix-archlinux-support --noconfirm --needed
 echo "#" >> /etc/pacman.conf
 echo "[extra]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf

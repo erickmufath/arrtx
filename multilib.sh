@@ -20,9 +20,9 @@ pacman-key --import archlinux artix
 pacman-key --populate archlinux artix
 pacman -Syyu
 sudo cp -rf arrtx/xorg.conf /etc/X11/
-/usr/bin/runuser -u ${usrname} -- sudo pacman --needed - < arrtx/pkgs/extra-pkgs.txt
-/usr/bin/runuser -u ${usrname} -- sudo pacman --needed - < arrtx/pkgs/extra-pkgs.txt
-/usr/bin/runuser -u ${usrname} -- sudo pacman --needed - < arrtx/pkgs/extra-pkgs.txt
-/usr/bin/runuser -u ${usrname} -- sudo pacman --needed - < arrtx/pkgs/extra-pkgs.txt
-/usr/bin/runuser -u ${usrname} -- sudo pacman --needed - < arrtx/pkgs/extra-pkgs.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
+/usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

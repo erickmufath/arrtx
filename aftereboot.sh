@@ -3,7 +3,6 @@ cd /home/${usrname}/
 sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
 nmtui
 sleep 5
-source arrtx/install.conf
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1

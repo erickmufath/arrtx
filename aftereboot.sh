@@ -16,6 +16,9 @@ makepkg -si --noconfirm
 cd 
 yay -Syyu
 yay -Sy --needed - < arrtx/pkgs/aur.txt
+yay -Sy --needed - < arrtx/pkgs/aur.txt
+yay -Sy --needed - < arrtx/pkgs/aur.txt
+yay -Sy --needed - < arrtx/pkgs/aur.txt
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo ln -s /etc/runit/sv/cupsd /run/runit/service
 sudo ln -s /etc/runit/sv/ntpd /run/runit/service

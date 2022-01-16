@@ -1,8 +1,5 @@
 source /arrtx/install.conf
 cd /home/${usrname}/
-ln -s /etc/runit/sv/NetworkManager /run/runit/service
-sleep 5
-nmtui
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
@@ -19,7 +16,3 @@ yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
-sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
-sudo ln -s /etc/runit/sv/cupsd /run/runit/service
-sudo ln -s /etc/runit/sv/ntpd /run/runit/service
-sudo ln -s /etc/runit/sv/sddm /run/runit/service

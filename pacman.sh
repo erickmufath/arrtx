@@ -24,44 +24,44 @@ echo    ""
 echo    "           INSTALLING NVIDIA GRAPHICS DRIVER"
 echo    ""
 echo    "--------------------------------------------------------"
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/nvidia-pkgs.txt
 elif lspci | grep 'VGA' | grep -E "Radeon|AMD"; then
     echo    "--------------------------------------------------------"
 echo    ""
 echo    "           INSTALLING AMD GRAPHICS DRIVER"
 echo    ""
 echo    "--------------------------------------------------------"
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/amd-pkgs.txt
 elif lspci grep -E "Integrated Graphics Controller" <<< ${gpu_type}; then
     echo    "--------------------------------------------------------"
 echo    ""
 echo    "           INSTALLING INTEL GRAPHICS DRIVER"
 echo    ""
 echo    "--------------------------------------------------------"
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
 elif grep -E "Intel Corporation UHD" <<< ${gpu_type}; <<< ${gpu_type}; then
     echo    "--------------------------------------------------------"
 echo    ""
 echo    "           INSTALLING INTEL GRAPHICS DRIVER"
 echo    ""
 echo    "--------------------------------------------------------"
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
-    sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
+    pacman -Sy --noconfirm --needed - < arrtx/pkgs/intel-pkgs.txt
 fi
 case $boot in
 1)

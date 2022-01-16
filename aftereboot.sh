@@ -4,6 +4,7 @@ ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sleep 5
 nmtui
 /usr/bin/runuser -u ${usrname} -- arrtx/yay.sh
+sed -i 's/^panel_items = TSC/panel_items = TSCB/' /home/${usrname}/.config/tint2/tint2rc
 sed -i 's/^# MAX_SIZE=8192/MAX_SIZE=$zramd/' /etc/default/zramd
 #detect and set sddm nordic theme
 sddm_ava=$(pacman -Qqe)

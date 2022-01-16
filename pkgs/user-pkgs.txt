@@ -6,7 +6,6 @@ git
 ttf-carlito
 ttf-dejavu
 flatpak
-intel-ucode
 unzip
 ark
 gtk3

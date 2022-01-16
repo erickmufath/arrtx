@@ -1,4 +1,8 @@
 source arrtx/install.conf
+iso=$(curl -4 ifconfig.co/country-iso)
+pacman -Sy --noconfirm reflector ntp
+timedatectl set-ntp true
+reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 echo "--------------------------------------------------------"
 echo "           Setting Root Password        "
 echo "--------------------------------------------------------"

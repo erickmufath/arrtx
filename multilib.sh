@@ -23,4 +23,7 @@ pacman -Syyu
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
+iso=$(curl -4 ifconfig.co/country-iso)
+ln -s /etc/runit/sv/ntpd /run/runit/service
+reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

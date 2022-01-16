@@ -1,4 +1,5 @@
 tint2 &
 picom &
 nm-applet &
+volumeicon &
 nitrogen --restore

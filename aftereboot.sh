@@ -1,6 +1,5 @@
 source /arrtx/install.conf
 cd /home/${usrname}/
-sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
 nmtui
 sleep 5
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
@@ -19,10 +18,6 @@ yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
-sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
-sudo ln -s /etc/runit/sv/cupsd /run/runit/service
-sudo ln -s /etc/runit/sv/ntpd /run/runit/service
-sudo ln -s /etc/runit/sv/sddm /run/runit/service
 sudo sed -i 's/^# MAX_SIZE=8192/MAX_SIZE=$zramd/' /etc/default/zramd
 echo -e "\nSetup SDDM Theme"
 sudo cat <<EOF > /mnt/etc/sddm.conf

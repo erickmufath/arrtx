@@ -5,6 +5,17 @@ source arrtx/install.conf
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/user-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/user-pkgs.txt
 sh arrtx/game.sh
+# determine processor type and install microcode
+proc_type=$(lscpu)
+if grep -E "GenuineIntel" <<< ${proc_type}; then
+    echo "Installing Intel microcode"
+    pacman -S --noconfirm intel-ucode
+    proc_ucode=intel-ucode.img
+elif grep -E "AuthenticAMD" <<< ${proc_type}; then
+    echo "Installing AMD microcode"
+    pacman -S --noconfirm amd-ucode
+    proc_ucode=amd-ucode.img
+fi
 # Graphics Drivers find and install
 gpu_type=$(lspci)
 if lspci | grep -E "NVIDIA|GeForce"  <<< ${gpu_type};  then

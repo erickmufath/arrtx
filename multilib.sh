@@ -18,7 +18,6 @@ rm -r /etc/pacman.d/gnupg
 pacman-key --init
 pacman-key --populate archlinux artix
 pacman -Syyu
-sudo cp -rf arrtx/xorg.conf /etc/X11/
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/extra-pkgs.txt

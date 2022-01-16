@@ -4,6 +4,7 @@ source arrtx/install.conf
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/user-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/user-pkgs.txt
 /usr/bin/runuser -u ${usrname} -- sudo pacman -Sy --noconfirm --needed - < arrtx/pkgs/user-pkgs.txt
+sudo cp -rf arrtx/xorg.conf /etc/X11/
 sh arrtx/game.sh
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 ln -s /etc/runit/sv/bluetoothd /run/runit/service

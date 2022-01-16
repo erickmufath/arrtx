@@ -1,7 +1,4 @@
 iso=$(curl -4 ifconfig.co/country-iso)
-pacman -Sy --noconfirm reflector ntp
-timedatectl set-ntp true
-reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 echo "======================================================"
 echo "=] 1. BIOS/Legacy"
 echo "=] 2. UEFI [Beta Test]"
@@ -31,6 +28,9 @@ echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 rm -r /etc/pacman.d/gnupg
 pacman-key --init
 pacman-key --populate archlinux artix
+pacman -Sy --noconfirm reflector ntp ntp-runit
+ln -s /etc/runit/sv/ntpd /run/runit/service
+reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 #basestrap
 basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt
 basestrap /mnt --needed - < arrtx/pkgs/base-pkgs.txt

@@ -13,19 +13,12 @@ cp ~/arrtx/autostart ~/.config/openbox
 git clone https://aur.archlinux.org/yay.git 
 cd yay
 makepkg -si --noconfirm
-cd 
+cd ..
 yay -Syyu
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
 yay -Sy --needed - < arrtx/pkgs/aur.txt
-sudo sed -i 's/^# MAX_SIZE=8192/MAX_SIZE=$zramd/' /etc/default/zramd
-echo -e "\nSetup SDDM Theme"
-sudo cat <<EOF > /etc/sddm.conf
-[Theme]
-Current=Nordic
-EOF
-sleep 5
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo ln -s /etc/runit/sv/cupsd /run/runit/service
 sudo ln -s /etc/runit/sv/ntpd /run/runit/service

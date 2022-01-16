@@ -1,5 +1,7 @@
 rsync
 ntp
+ntp-runit
+reflector
 git
 ttf-caladea
 nomacs

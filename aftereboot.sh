@@ -1,8 +1,8 @@
 source /arrtx/install.conf
 cd /home/${usrname}/
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
-nmtui
 sleep 5
+nmtui
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2
 git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1
@@ -25,6 +25,7 @@ sudo cat <<EOF > /mnt/etc/sddm.conf
 [Theme]
 Current=Nordic
 EOF
+sleep 5
 ln -s /etc/runit/sv/bluetoothd /run/runit/service
 ln -s /etc/runit/sv/cupsd /run/runit/service
 ln -s /etc/runit/sv/ntpd /run/runit/service

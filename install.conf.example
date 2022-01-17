@@ -1,0 +1,4 @@
+boot=1
+zramd=2048
+hstname=pc
+drive=sda

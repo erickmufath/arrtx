@@ -31,7 +31,8 @@ sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /et
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 #Add parallel downloading
-sed -i 's/^#Para/Para/' /etc/pacman.conf
+#sed -i 's/^#Para/Para/' /etc/pacman.conf
+sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
 
 #Enable multilib
 sed -i "/\[lib32\]/,/Include/"'s/^#//' /etc/pacman.conf

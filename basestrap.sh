@@ -15,8 +15,8 @@ echo ""
 read -p "->] Input Drive untuk install Bootloader (Contoh : sda, sdb, atau nvmen1) = " drive
 pacman -Sy sed artix-archlinux-support pacman --noconfirm --needed
 #Add parallel downloading
-sed -i 's/^#Para/Para/' /etc/pacman.conf
-#sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
+#sed -i 's/^#Para/Para/' /etc/pacman.conf
+sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 2/' /etc/pacman.conf
 #Enable multilib
 sed -i "/\[lib32\]/,/Include/"'s/^#//' /etc/pacman.conf
 sed -i "/\[lib32-gremlins\]/,/Include/"'s/^#//' /etc/pacman.conf

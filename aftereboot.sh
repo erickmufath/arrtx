@@ -3,6 +3,5 @@ read -p "Make sure you are in root (press enter to continue or ctrl+c to abort) 
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sleep 5
 nmtui
-/usr/bin/runuser -u ${usrname} -- arrtx/yay.sh
 sed -i 's/^panel_items = TSC/panel_items = TSCB/' /home/${usrname}/.config/tint2/tint2rc
 sed -i 's/^# MAX_SIZE=8192/MAX_SIZE=$zramd/' /etc/default/zramd

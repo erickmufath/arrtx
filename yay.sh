@@ -1,5 +1,7 @@
 source /arrtx/install.conf
 sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service
+sleep 5
+nmtui
 cd /home/${usrname}/
 git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes
 rm -rf ~/.config/tint2

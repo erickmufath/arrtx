@@ -6,6 +6,7 @@ git
 libgl
 mesa
 neofetch
+picom
 i3lock
 ttf-carlito
 ttf-dejavu

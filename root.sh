@@ -1,5 +1,4 @@
 source /arrtx/install.conf
-read -p "Make sure you are in root (press enter to continue or ctrl+c to abort) : "
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sleep 5
 nmtui

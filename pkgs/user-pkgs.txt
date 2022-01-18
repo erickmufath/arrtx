@@ -3,6 +3,10 @@ linux-headers
 networkmanager
 networkmanager-runit
 git
+libgl
+mesa
+neofetch
+i3lock
 ttf-carlito
 ttf-dejavu
 flatpak

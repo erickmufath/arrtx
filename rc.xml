@@ -249,7 +249,7 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-	<command>i3lock --color=00425ecommand>
+	<command>i3lock --color=00202e<command>
       </action>
     </keybind>
 ###########################################################################################################################################################

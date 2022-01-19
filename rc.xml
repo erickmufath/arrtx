@@ -242,6 +242,11 @@
 	<command>firefox</command>
       </action>
     </keybind>
+    <keybind key="W-A-q">
+      <action name="Execute">
+	<command>openbox --exit</command>
+      </action>
+    </keybind>
 ###########################################################################################################################################################
 
   <!-- Keybindings for desktop switching -->

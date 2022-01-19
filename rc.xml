@@ -223,12 +223,12 @@
 ##brightness control
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-	<command>brightnessctl s 2%+</command>
+	<command>sudo brightnessctl s 2%+</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-	<command>brightnessctl s 2%-</command>
+	<command>sudo brightnessctl s 2%-</command>
       </action>
     </keybind>
 ##opera/chromium
@@ -242,7 +242,7 @@
 	<command>firefox</command>
       </action>
     </keybind>
-    <keybind key="W-A-q">
+    <keybind key="W-S-q">
       <action name="Execute">
 	<command>openbox --exit</command>
       </action>

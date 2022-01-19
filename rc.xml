@@ -247,6 +247,11 @@
 	<command>openbox --exit</command>
       </action>
     </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+	<command>i3lock --color=00425ecommand>
+      </action>
+    </keybind>
 ###########################################################################################################################################################
 
   <!-- Keybindings for desktop switching -->
